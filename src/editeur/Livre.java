@@ -6,7 +6,7 @@ public class Livre {
     Integer prix;
     Integer nbPage;
     Long isbn;
-    String Anné;
+    String Anne;
 
     @Override
     public String toString() {
@@ -16,9 +16,18 @@ public class Livre {
         sb.append(", prix=").append(prix);
         sb.append(", nbPage=").append(nbPage);
         sb.append(", isbn=").append(isbn);
-        sb.append(", Anné='").append(Anné).append('\'');
+        sb.append(", Anné='").append(Anne).append('\'');
         sb.append('}');
         return sb.toString();
+    }
+
+    public Livre(Livre livre) {
+        this.setTitre(livre.getTitre());
+        this.setAuteur(livre.getAuteur());
+        this.setPrix(livre.getPrix());
+        this.setNbPage(livre.getNbPage());
+        this.setAnne(livre.getAnne());
+        this.setIsbn(livre.getIsbn());
     }
 
     public String getTitre() {
@@ -61,12 +70,12 @@ public class Livre {
         this.isbn = isbn;
     }
 
-    public String getAnné() {
-        return Anné;
+    public String getAnne() {
+        return Anne;
     }
 
-    public void setAnné(String anné) {
-        Anné = anné;
+    public void setAnne(String anne) {
+        this.Anne = anne;
     }
 
     public Livre() {
@@ -78,13 +87,13 @@ public class Livre {
         this.isbn = isbn;
     }
 
-    public Livre(String titre, String auteur, Integer prix, Integer nbPage, Long isbn, String anné) {
+    public Livre(String titre, String auteur, Integer prix, Integer nbPage, Long isbn, String anne) {
         this.titre = titre;
         this.auteur = auteur;
         this.prix = prix;
         this.nbPage = nbPage;
         this.isbn = isbn;
-        Anné = anné;
+        Anne = anne;
     }
 
     public Livre(String titre, String auteur, Integer prix, Integer nbPage, Long isbn) {
