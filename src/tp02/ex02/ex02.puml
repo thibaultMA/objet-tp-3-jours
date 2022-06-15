@@ -17,7 +17,7 @@ class stagiaire {
 class formateur {
      numeroIntervenant
      DateDeCreation
-     NbIntervenant
+     <u>nbIntervenant</u>
  }
 
 personne <|-- stagiaire

@@ -5,13 +5,13 @@ import java.time.LocalDate;
 public class Fromateur extends Personne{
     int numIntervenant;
     LocalDate dateCreatiion;
-    int nbIntervenant;
+    static int nbIntervenant;
 
-    public Fromateur(String nom, String prenom, String telephone, int numIntervenant, LocalDate dateCreatiion, int nbIntervenant) {
+    public Fromateur(String nom, String prenom, String telephone, int numIntervenant, LocalDate dateCreatiion) {
         super(nom, prenom, telephone);
         this.numIntervenant = numIntervenant;
         this.dateCreatiion = dateCreatiion;
-        this.nbIntervenant = nbIntervenant;
+        nbIntervenant ++;
     }
 
     @Override
