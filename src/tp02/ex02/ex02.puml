@@ -7,17 +7,19 @@ abstract class personne {
    tel
    toString()
 }
-class stagiaire {
 
+class stagiaire {
    adresse
    ville
    tel
 }
+
 class formateur {
      numeroIntervenant
      DateDeCreation
      NbIntervenant
  }
+
 personne <|-- stagiaire
 personne <|-- formateur
 @enduml
