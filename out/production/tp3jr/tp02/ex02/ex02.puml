@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class personne {
+   nom
+   prenom
+   tel
+   toString()
+}
+
+class stagiaire {
+   adresse
+   ville
+   tel
+}
+
+class formateur {
+     numeroIntervenant
+     DateDeCreation
+     NbIntervenant
+ }
+
+personne <|-- stagiaire
+personne <|-- formateur
+@enduml
